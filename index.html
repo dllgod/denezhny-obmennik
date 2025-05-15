@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Денежный обменник</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+    }
+    .header {
+      background-color: #004481;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    .container {
+      background-color: white;
+      width: 90%;
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .container h2 {
+      margin-bottom: 30px;
+      color: #333;
+      font-size: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #0070c9;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #005ea3;
+    }
+    .footer {
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+      margin-top: 40px;
+      padding: 20px;
+    }
+  </style>
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const login = document.getElementById("login").value.trim();
+      const password = document.getElementById("password").value.trim();
+      if (login === "model456" && password === "qwerty456") {
+        window.location.href = "cabinet.html";
+      } else {
+        alert("Неверный логин или пароль");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="header">Денежный Обменник</div>
+  <div class="container">
+    <h2>Вход в личный кабинет</h2>
+    <form onsubmit="handleLogin(event)">
+      <input type="text" id="login" placeholder="Логин" required />
+      <input type="password" id="password" placeholder="Пароль" required />
+      <button type="submit">Войти</button>
+    </form>
+  </div>
+  <div class="footer">© 2025 Денежный обменник. Все права защищены.</div>
+</body>
+</html>
